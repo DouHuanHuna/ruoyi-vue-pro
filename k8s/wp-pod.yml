@@ -8,7 +8,7 @@ metadata:
 
 spec:
   containers:
-    - image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/wordpress:php8.3-fpm-alpine
+    - image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/library/wordpress:6.2.2
       name: wp-pod
       imagePullPolicy: IfNotPresent
       ports:
