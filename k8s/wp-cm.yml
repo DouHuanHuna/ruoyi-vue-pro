@@ -4,7 +4,7 @@ metadata:
   name: wp-cm
 
 data:
-  HOST: '10.244.0.8'
+  HOST: '10.244.0.7'
   USER: 'wp'
   PASSWORD: '123'
   NAME: 'db'
