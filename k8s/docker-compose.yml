@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/nginx:1.27.0
+    network_mode: "host"  # 使用主机网络模式
+    volumes:
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf
+    restart: "no"  # 等同于 --rm，容器退出时不会自动重启
