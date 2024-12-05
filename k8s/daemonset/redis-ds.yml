@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: redis-ds
+  labels:
+    app: redis-ds
+
+spec:
+  selector:
+    matchLabels:
+      name: redis-ds
+
+  template:
+    metadata:
+      labels:
+        name: redis-ds
+    spec:
+      containers:
+        - image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/library/redis:7.0.14
+          name: redis
+          ports:
+            - containerPort: 6379
